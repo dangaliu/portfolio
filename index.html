@@ -444,6 +444,26 @@
       transform: translateY(-1px);
     }
 
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #dbe0ff;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      text-decoration: none;
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .button-secondary:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.28);
+    }
+
     .hero-meta {
       font-size: 11px;
       color: var(--text-muted);
@@ -1130,10 +1150,23 @@
       }
     }
 
-    .contact-card {
-      padding: 18px 16px 16px;
+    .contact-button {
+      width: 100%;
+      justify-content: center;
     }
 
+    .contact-card {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-buttons-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
     .contact-aside {
       padding: 16px 16px 14px;
       border-radius: 18px;
@@ -1679,7 +1712,7 @@
                 <div class="stack-chips">
                   <span class="chip"><span class="chip-dot"></span>Flutter</span>
                   <span class="chip"><span class="chip-dot"></span>Kotlin · Jetpack Compose</span>
-                  <span class="chip"><span class="chip-dot"></span>Swift / SwiftUI</span>
+                  <span class="chip"><span class="chip-dot"></span>Java · XML</span>
                 </div>
               </div>
               <div>
@@ -1701,6 +1734,8 @@
               <div>
                 <div class="stack-group-title">Интеграции</div>
                 <div class="stack-chips">
+                  <span class="chip"><span class="chip-dot"></span>Искусственный Интеллект</span>
+                  <span class="chip"><span class="chip-dot"></span>Реклама</span>
                   <span class="chip"><span class="chip-dot"></span>Платежи и подписки</span>
                   <span class="chip"><span class="chip-dot"></span>Push-уведомления</span>
                   <span class="chip"><span class="chip-dot"></span>Analytics &amp; A/B-тесты</span>
@@ -1740,64 +1775,111 @@
           <div>
             <div class="section-kicker">Отзывы</div>
             <h2 class="section-title">Что говорят клиенты и партнёры</h2>
+            <div
+              style="
+                margin-top: 10px;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 6px 12px;
+                border-radius: 999px;
+                background: rgba(76, 111, 255, 0.12);
+                border: 1px solid rgba(76, 111, 255, 0.32);
+                font-size: 12px;
+                cursor: pointer;
+                transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+              "
+              onmouseover="this.style.background='rgba(76,111,255,0.20)'; this.style.borderColor='rgba(76,111,255,0.45)';"
+              onmouseout="this.style.background='rgba(76,111,255,0.12)'; this.style.borderColor='rgba(76,111,255,0.32)';"
+              onclick="window.open('https://kwork.ru/user/dangaliu','_blank')"
+            >
+              <span style="width: 7px; height: 7px; border-radius: 50%; background:#4c6fff;"></span>
+
+              <span style="color:#dbe0ff; text-decoration:none; display:flex; align-items:center; gap:4px;">
+                Отзывы и портфолио на Kwork
+                <span style="font-size:12px; opacity:0.9;">↗</span>
+              </span>
+            </div>
           </div>
-          <p class="section-subtitle">
-            Важно не только запустить приложение, но и комфортно работать в процессе. Вот несколько коротких отзывов о совместных проектах.
-          </p>
         </div>
         <div class="testimonials-grid">
           <article class="card testimonial-card fade-in delay-1">
             <div class="testimonial-header">
               <div class="avatar">
-                <img src="https://via.placeholder.com/80.png?text=A" alt="Фотография клиента, основателя медитационного сервиса" loading="lazy">
+                <img src="images/review1.jpg" alt="Фотография клиента, основателя медитационного сервиса" loading="lazy">
               </div>
               <div>
-                <div class="testimonial-name">Анна, основатель Calm Mind</div>
-                <div class="testimonial-role">Приложение для медитаций</div>
+                <div class="testimonial-name">AM_Architect</div>
               </div>
             </div>
             <p class="testimonial-text">
-              Получили рабочий MVP за полтора месяца, дальше итеративно добавляли фичи. Драйвили метрики, собирали обратную связь и быстро выкатывали улучшения. По ощущениям — свой продуктовый разработчик в команде.
+              Очень ответственный исполнитель! Выполнил все четко за короткие сроки. Всем рекомендую
             </p>
-            <div class="testimonial-meta">
-              Результат: <strong>рост удержания и стабильная оценка 4.8★</strong>
-            </div>
           </article>
-
-          <article class="card testimonial-card fade-in delay-2">
+          <article class="card testimonial-card fade-in delay-1">
             <div class="testimonial-header">
               <div class="avatar">
-                <img src="https://via.placeholder.com/80.png?text=D" alt="Фотография руководителя финтех проекта" loading="lazy">
+                <img src="images/review2.jpg" alt="Фотография клиента, основателя медитационного сервиса" loading="lazy">
               </div>
               <div>
-                <div class="testimonial-name">Дмитрий, продакт Cash Flow</div>
-                <div class="testimonial-role">Финтех-агрегатор займов</div>
+                <div class="testimonial-name">G-l-e-b</div>
               </div>
             </div>
             <p class="testimonial-text">
-              Понравился подход к архитектуре и прозрачность по срокам. После рефакторинга приложение перестало падать под нагрузкой, а новые фичи стали внедряться заметно быстрее и без сюрпризов.
+              Нужны были правки в приложении,  Данияр сделал всё качественно и быстро, результатом и ценой доволен!
             </p>
-            <div class="testimonial-meta">
-              Результат: <strong>минус 60% критичных багов после релизов</strong>
-            </div>
           </article>
-
-          <article class="card testimonial-card fade-in delay-3">
+          <article class="card testimonial-card fade-in delay-1">
             <div class="testimonial-header">
               <div class="avatar">
-                <img src="https://via.placeholder.com/80.png?text=E" alt="Фотография директора онлайн школы" loading="lazy">
+                <img src="images/review3.jpg" alt="Фотография клиента, основателя медитационного сервиса" loading="lazy">
               </div>
               <div>
-                <div class="testimonial-name">Екатерина, директор онлайн-школы</div>
-                <div class="testimonial-role">Образовательное приложение</div>
+                <div class="testimonial-name">-Diman-</div>
               </div>
             </div>
             <p class="testimonial-text">
-              Мы пришли с веб-платформой и идеей “сделать приложение”. В итоге получили продуманную мобильную версию с прогрессом, пушами и удобной оплатой. Помог и с требованиями стора, и с аналитикой.
+              Исполнитель профессионал , хороший программист, очень хорошо разбирается. Работа сделано по ТЗ. Внесены все правки , которых даже не было в ТЗ. Приложение сделано на отлично. Рекомендую исполнителя и сам буду еще обращаться.
             </p>
-            <div class="testimonial-meta">
-              Результат: <strong>рост моб. выручки и возвратных пользователей</strong>
+          </article>
+          <article class="card testimonial-card fade-in delay-1">
+            <div class="testimonial-header">
+              <div class="avatar">
+                <img src="images/review4.jpg" alt="Фотография клиента, основателя медитационного сервиса" loading="lazy">
+              </div>
+              <div>
+                <div class="testimonial-name">The_best_copywriter</div>
+              </div>
             </div>
+            <p class="testimonial-text">
+              Данный исполнитель профессионал своего дела! Необходимо было доработать мобильное приложение. Исполнитель рассказал простыми словами как можно сделать, понимал с полуслова все мои хотелки (я технически вообще не подкованный человек). Работаем дальше. Рекомендую!
+            </p>
+          </article>
+          <article class="card testimonial-card fade-in delay-1">
+            <div class="testimonial-header">
+              <div class="avatar">
+                <img src="images/review5.jpg" alt="Фотография клиента, основателя медитационного сервиса" loading="lazy">
+              </div>
+              <div>
+                <div class="testimonial-name">ramiel</div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              Dangaliu — настоящий профессионал! Выполнил работу раньше срока, всё сделано на 100%. Соотношение цены и качества превзошло мои ожидания. Рекомендую!
+            </p>
+          </article>
+          <article class="card testimonial-card fade-in delay-1">
+            <div class="testimonial-header">
+              <div class="avatar">
+                <img src="images/review6.jpg" alt="Фотография клиента, основателя медитационного сервиса" loading="lazy">
+              </div>
+              <div>
+                <div class="testimonial-name">alfateam</div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              Все четко и по макету сделал разработчик, результатом доволен
+            </p>
           </article>
         </div>
       </section>
@@ -1809,61 +1891,18 @@
             <div class="section-kicker">Контакты</div>
             <h2 class="section-title">Расскажите о своём проекте</h2>
           </div>
-          <p class="section-subtitle">
-            Заполните короткую форму — я вернусь с ответами по срокам, формату и возможным следующим шагам.
-          </p>
         </div>
         <div class="contact-section">
           <div class="card contact-card fade-in delay-1">
-            <form id="contactForm" class="contact-form" novalidate>
-              <div class="field-row">
-                <div class="field-group">
-                  <label for="name" class="field-label">Имя<span>*</span></label>
-                  <input id="name" name="name" type="text" class="input" placeholder="Как к вам обращаться" autocomplete="name" />
-                  <div class="error-message" data-error-for="name"></div>
-                </div>
-                <div class="field-group">
-                  <label for="email" class="field-label">E-mail<span>*</span></label>
-                  <input id="email" name="email" type="email" class="input" placeholder="Для связи и отправки ответа" autocomplete="email" />
-                  <div class="error-message" data-error-for="email"></div>
-                </div>
-              </div>
+            <div class="contact-buttons-wrapper">
+              <a href="https://t.me/dangaliu" target="_blank" class="button-primary contact-button">
+                Написать в Telegram <span>→</span>
+              </a>
 
-              <div class="field-group">
-                <label for="projectType" class="field-label">Тип проекта</label>
-                <select id="projectType" name="projectType" class="select">
-                  <option value="">Выберите вариант</option>
-                  <option value="new">Новое мобильное приложение</option>
-                  <option value="existing">Доработка существующего приложения</option>
-                  <option value="consulting">Аудит, консалтинг, архитектура</option>
-                  <option value="other">Другое</option>
-                </select>
-              </div>
-
-              <div class="field-group">
-                <label for="message" class="field-label">Кратко о задаче<span>*</span></label>
-                <textarea id="message" name="message" class="textarea" placeholder="Расскажите, что хотите сделать, на какой платформе и к какому сроку."></textarea>
-                <div class="error-message" data-error-for="message"></div>
-              </div>
-
-              <div class="checkbox-row">
-                <input type="checkbox" id="consent" name="consent" />
-                <label for="consent">
-                  Я согласен(на) на обработку указанных данных для связи по проекту и понимаю, что это не подписка на рассылки.
-                </label>
-              </div>
-              <div class="error-message" data-error-for="consent"></div>
-
-              <div class="form-footer">
-                <button type="submit" class="button-primary">
-                  Отправить запрос
-                  <span>→</span>
-                </button>
-                <div class="form-note">
-                  Обычно отвечаю в течение <strong>1–2 рабочих дней</strong>.
-                </div>
-              </div>
-            </form>
+              <a href="mailto:ii4603399@gmail.com" class="button-secondary contact-button">
+                Написать на Email
+              </a>
+            </div>
           </div>
           <aside class="contact-aside fade-in delay-2">
             <div class="contact-aside-row">
