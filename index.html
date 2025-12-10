@@ -275,7 +275,6 @@
     /* Hero + video background */
     .hero {
       position: relative;
-      overflow: hidden;
       padding-top: 56px;
       padding-bottom: 72px;
       display: grid;
@@ -674,21 +673,23 @@
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       .hero-phone-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
       }
+
       .phone-mock {
-        aspect-ratio: 9/18;
+        padding: 6px;
+        aspect-ratio: 9/18; /* можешь подобрать, чтобы выглядело лучше */
       }
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
+
+      .phone-mock-label {
+        font-size: 9px;
       }
-      .button-primary,
-      .button-ghost {
-        width: 100%;
-        justify-content: center;
+
+      .phone-mock-caption {
+        font-size: 8px;
       }
     }
 
